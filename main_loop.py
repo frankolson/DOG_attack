@@ -1,3 +1,6 @@
+#
+# File to store the main program loop
+#
 import settings
 import util
 import time
