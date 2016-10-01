@@ -17,10 +17,10 @@ if __name__ == "__main__":
             print "Exiting...."
             sys.exit(1)
         except Exception as exc:
-            print "Error with the scraping: %s" % sys.exc_info()[0]
+            print "Error with the DOG Attack: %s" % sys.exc_info()[0]
             traceback.print_exc()
         else:
-            print "%s: Successfully finished scraping" % time.ctime()
+            print "%s: Successfully finished DOG Attack" % time.ctime()
 
         # Sleep time between attacks
         try:

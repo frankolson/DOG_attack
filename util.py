@@ -2,15 +2,16 @@
 # File to store functions related to filtering
 #
 import settings
-import urllib.request
+import urllib2
 import json
 from time import sleep
+from slackclient import SlackClient
 
 # post to slack
 def post_to_slack(slack_client, message):
 
     slack_client.api_call(
-        "chat.postMessage", channel=settings.SLACK_CHANNEL, text=post,
+        "chat.postMessage", channel=settings.SLACK_USER, text=message,
         username='DOGgie', icon_emoji=':dog:'
     )
 
@@ -20,9 +21,9 @@ def dog_attack():
     slack_client = SlackClient(settings.SLACK_TOKEN)
 
     # send 100 messages
-    for _ in range(100)
+    for _ in range(100):
         # create message
-        resp = urllib.request.urlopen(url).read()
+        resp = urllib2.urlopen(settings.URL).read()
         data = json.loads(resp.decode('utf-8'))
         message = data['value']['joke']
 
