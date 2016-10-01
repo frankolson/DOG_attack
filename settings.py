@@ -3,6 +3,9 @@
 #
 from secret import *
 
+## Chuck Jokes
+URL = 'http://api.icndb.com/jokes/random?'
+
 ## System Settings
 SLACK_CHANNEL  = "#george"
 SLEEP_INTERVAL = 20 * 60 # 20 minutes
