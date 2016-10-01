@@ -4,5 +4,5 @@
 from secret import *
 
 ## System Settings
-SLACK_CHANNEL  = "#hoodhunting"
+SLACK_CHANNEL  = "#george"
 SLEEP_INTERVAL = 20 * 60 # 20 minutes
