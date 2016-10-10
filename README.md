@@ -10,3 +10,9 @@ _Denial of George Attack_
 3. settings.py ~ preferences that make for an annoying prank
   * System:
     * `SLACK_CHANNEL`
+
+### Dependencies
+
+* `python-slackclient`
+* `twilio-python`
+* `urllib2`
