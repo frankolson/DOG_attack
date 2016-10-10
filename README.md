@@ -7,9 +7,16 @@ _Denial of George Attack_
 2. util.py ~ abstracted functions
 3. secret.py ~ all of the secretness for the api keys!!!
   * `SLACK_TOKEN`
+  * `TWILIO_ACCOUNT_SID`
+  * `TWILIO_AUTH_TOKEN`
 3. settings.py ~ preferences that make for an annoying prank
-  * System:
+  * Slack:
     * `SLACK_CHANNEL`
+  * Twilio
+    * `TO_PHONE`
+    * `FROM_PHONE`
+  * System:
+    * `SLEEP_INTERVAL` ~ for rate limiting
 
 ### Dependencies
 
