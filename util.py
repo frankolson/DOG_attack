@@ -1,12 +1,13 @@
 #
 # File to store functions related to filtering
 #
+import secret
 import settings
 import urllib2
 import json
 from time import sleep
 from slackclient import SlackClient
-from twilio.rest import TwilioRestClient
+from twilio.rest import Client
 
 # post to slack
 def post_to_slack(slack_client, message):
@@ -17,9 +18,9 @@ def post_to_slack(slack_client, message):
 
 # send Twilio text
 def text_with_twilio(twilio_client, message):
-    message = client.messages.create(
-        to=settings.TO_PHONE,
-        from_=settings.FROM_PHONE,
+    message = twilio_client.messages.create(
+        to=secret.TO_PHONE,
+        from_=secret.FROM_PHONE,
         body=message
     )
 
@@ -27,8 +28,8 @@ def text_with_twilio(twilio_client, message):
 def dog_attack():
     # create slack and twilio clients
     slack_client = SlackClient(settings.SLACK_TOKEN)
-    twilio_client = TwilioRestClient(settings.TWILIO_ACCOUNT_SID,
-                                     settings.TWILIO_AUTH_TOKEN)
+    twilio_client = Client(settings.TWILIO_ACCOUNT_SID,
+                           settings.TWILIO_AUTH_TOKEN)
 
     # send 100 messages
     for _ in range(100):
